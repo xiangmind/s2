@@ -1,3 +1,98 @@
+
+Setting Up the Ubuntu ARM64 Virtual Machine
+
+1. Use VirtualBox
+2. `sudo apt update && sudo apt upgrade -y`
+3. `sudo apt install -y python3-pip python3-venv git scrot zenity python3-tk python3-dev`
+4. `sudo apt install -y libatk-bridge2.0-dev gir1.2-atspi-2.0 python3-pyatspi`
+5. `git clone https://github.com/simular-ai/Agent-S.git`
+6. Set API Keys, open your .bashrc file to permanently store your API keys, scroll to the bottom of the file and add your keys
+
+```bash
+# Your OpenRouter API Key
+export OPENROUTER_API_KEY="sk-or-v1-97d5ccd745eeeff2ef99572436fe1828"
+
+# The official OpenRouter API endpoint
+export OPEN_ROUTER_ENDPOINT_URL="https://openrouter.ai/api/v1"
+
+
+export GEMINI_API_KEY="AIzaSyCU3hqHtEw7M"
+export GEMINI_ENDPOINT_URL="https://generativelanguage.googleapis.com/v1beta/openai/"
+
+
+```
+
+---
+
+
+Using a Python Version Manager (pyenv)
+```bash
+# Install build dependencies
+sudo apt update
+sudo apt install -y build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev curl \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+
+# Install pyenv using its official installer
+curl https://pyenv.run | bash
+```
+
+```bash
+vim  ~/.bashrc
+# Scroll to the very end of the file and add these three lines:
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+```
+
+Completely close and reopen your terminal for the changes to take effect. This is a crucial step.
+
+
+Install a Compatible Python Version
+
+```bash
+
+# This command will download and compile Python 3.12. This may take several minutes.
+pyenv install 3.12.4 
+```
+
+Set the Python Version for Your Project
+```bash
+# This is the magic of pyenv. You can set a specific Python version for your Agent-S directory.
+
+cd Agent-S
+pyenv local 3.12.4
+
+python --version
+# Expected output: Python 3.12.4
+
+which python
+# Expected output: /home/your_user/.pyenv/shims/python
+
+```
+
+Create a Virtual Environment
+
+```bash
+# Create a new one with Python 3.12.4
+python -m venv venv
+source venv/bin/activate
+pip install -e .
+```
+
+
+
+---
+
+
+1. On the login screen, click the gear icon (⚙️) and select Ubuntu on Xorg.
+2. `echo $XDG_SESSION_TYPE` # x11
+3. Activate your environment
+```bash
+cd Agent-S
+source venv/bin/activate
+```
+4. Run the agent_s2 command
 ```bash
 agent_s2 \
   --provider "open_router" \
