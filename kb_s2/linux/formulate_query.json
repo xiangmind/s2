@@ -1,3 +1,16 @@
 {
-  "open google.com, search for LIGO": "How to open a web browser and navigate to a specific URL in Linux?"
+  "open google.com, search for LIGO": "How to open a web browser and navigate to a specific URL in Linux?",
+  "go to google.com, search for gravitational waves events, and save  a txt ": "How to open a web browser in Ubuntu terminal?",
+  "go to google.com, search for gravitational waves events, save the content to a txt.": "How to open google.com in Firefox using the terminal?",
+  "write a article about 'computer use agent' with gedit, and save it to the disk.": "How to write and save a file in Gedit?",
+  "open gedit, write an article aboout 'openai operator', then save it with t": "How to open gedit and save a file in Ubuntu?",
+  "open gedit, write an article about openai operator, then save as op.txt.": "What is OpenAI Operator and its main features and use cases?",
+  "open gedit, write a sentence 'I am robot', save it as robot.txt": "How to open gedit, write text and save a file in Linux?",
+  "open gedit, write 'i am robot', save it as ro.txt": "How to open gedit and save a file in Linux?",
+  "open gedit, write a sentence 'I am robot', as as ro.txt": "How to open gedit, write text and save a file in Linux?",
+  "open gedit, write an article about 'peter shor', save as shot.txt.": "Who is Peter Shor and what are his major contributions to quantum computing?",
+  "open gedit write about perter shor, save as shor.txt": "Who is Peter Shor and what are his major contributions to quantum computing?",
+  "google perter shor, click his profile, save the content to shor.txt": "Who is Peter Shor and what is his professional profile page?",
+  "open Files": "How to open Files application in Linux",
+  "Open Files": "How to open files in Ubuntu?"
 }

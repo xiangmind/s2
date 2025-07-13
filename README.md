@@ -104,6 +104,17 @@ agent_s2 \
   --embedding_engine_type "gemini"
 ```
 
+5. 
+
+```bash
+agent_s2 \
+  --provider "open_router" \
+  --model "anthropic/claude-3.7-sonnet:thinking" \
+  --grounding_model_provider "open_router" \
+  --grounding_model "anthropic/claude-3.7-sonnet" \
+  --grounding_model_resize_width 1366 \ 
+  --embedding_engine_type "gemini"
+```
 
 
 <h1 align="center">
